@@ -59,7 +59,7 @@ public class Client
 
       var content = await response.Content.ReadAsStringAsync();
 
-      T? parsedContent = JsonSerializer.Deserialize<T>(content, Client.JsonSerializerOptions);
+      T? parsedContent = JsonSerializer.Deserialize<T>(content, Config.JsonSerializerOptions);
 
       return (parsedContent, default);
     }
@@ -74,7 +74,7 @@ public class Client
   {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
 
-    string jsonBody = JsonSerializer.Serialize<T>(data, Client.JsonSerializerOptions);
+    string jsonBody = JsonSerializer.Serialize<T>(data, Config.JsonSerializerOptions);
 
     HttpContent requestData = new StringContent(jsonBody, Encoding.UTF8, "application/json");
 
@@ -91,7 +91,7 @@ public class Client
 
       var content = await response.Content.ReadAsStringAsync();
 
-      T? parsedContent = JsonSerializer.Deserialize<T>(content, Client.JsonSerializerOptions);
+      T? parsedContent = JsonSerializer.Deserialize<T>(content, Config.JsonSerializerOptions);
 
       return (parsedContent, default);
     }
@@ -124,7 +124,7 @@ public class Client
 
       var content = await response.Content.ReadAsStringAsync();
 
-      T? parsedContent = JsonSerializer.Deserialize<T>(content, Client.JsonSerializerOptions);
+      T? parsedContent = JsonSerializer.Deserialize<T>(content, Config.JsonSerializerOptions);
 
       return (parsedContent, default);
     }
@@ -139,7 +139,7 @@ public class Client
   {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
 
-    string jsonBody = JsonSerializer.Serialize<T>(resource, Client.JsonSerializerOptions);
+    string jsonBody = JsonSerializer.Serialize<T>(resource, Config.JsonSerializerOptions);
 
     HttpContent requestData = new StringContent(jsonBody, Encoding.UTF8, "application/json");
 
@@ -159,7 +159,7 @@ public class Client
 
       var content = await response.Content.ReadAsStringAsync();
 
-      T? parsedContent = JsonSerializer.Deserialize<T>(content, Client.JsonSerializerOptions);
+      T? parsedContent = JsonSerializer.Deserialize<T>(content, Config.JsonSerializerOptions);
 
       return (parsedContent, default);
     }
@@ -169,20 +169,6 @@ public class Client
       return (default, error.Message);
     }
   }
-
-  public class LowercaseNamingPolicy : JsonNamingPolicy
-  {
-    public override string ConvertName(string name) => name.ToLower();
-  }
-
-  public static readonly JsonSerializerOptions JsonSerializerOptions = new()
-  {
-    PropertyNameCaseInsensitive = true,
-    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
-    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-    Converters = { new JsonStringEnumConverter(new LowercaseNamingPolicy()) },
-    WriteIndented = true
-  };
 
   private string EncodeCredentials(AuthCredentials credentials)
   {

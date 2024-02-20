@@ -32,12 +32,12 @@ using Aidbox.FHIR.Constraint;
 using API;
 
 Auth authorization = new()
-    {
-        Method = AuthMethods.BASIC,
-        Credentials = new() { Username = "basic", Password = "secret" }
-    };
+{
+    Method = AuthMethods.BASIC,
+    Credentials = new() { Username = "basic", Password = "secret" }
+};
 
-    Client client = new("https://name.aidbox.app", authorization);
+Client client = new("https://name.aidbox.app", authorization);
 ```
 
 #### Models

@@ -42,6 +42,22 @@ public class Client
     this.Url = url;
   }
 
+  public async Task<string> GetInfo()
+  {
+    UriBuilder resourcePath = new(this.Url) { Path = "$version" };
+
+    var httpClient = this.HttpClient;
+
+    var response = await httpClient.GetAsync(resourcePath.Uri);
+
+    if (!response.IsSuccessStatusCode)
+    {
+      throw new HttpRequestException($"Server returned error: {response.StatusCode}");
+    }
+
+    return await response.Content.ReadAsStringAsync() ?? throw new Exception("");
+  }
+
   public async Task<(T? result, string? error)> Read<T>(string id) where T : IResource
   {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };

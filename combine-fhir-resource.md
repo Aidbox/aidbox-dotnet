@@ -1,4 +1,4 @@
-FHIR Elements
+### FHIR Elements
 
 ```C#
 HumanName name = new() { Given = ["John"], Family = "Doe" };
@@ -19,7 +19,7 @@ Identifier identifier = new()
 };
 ```
 
-Serialization
+### Serialization
 
 ```C#
 using Utils;
@@ -34,7 +34,7 @@ var patient = new Patient()
 JsonSerializer.Serialize(patient, Config.JsonSerializerOptions)
 ```
 
-Output:
+#### Output:
 
 ```JSON
 {
@@ -59,7 +59,7 @@ Output:
 }
 ```
 
-Deserialization
+### Deserialization
 
 ```C#
 using Utils;
@@ -67,7 +67,7 @@ using Utils;
 var patient = JsonSerializer.Deserialize<Patient>(JSONPatientString, Config.JsonSerializerOptions);
 ```
 
-Output
+#### Output
 
 ```
 Aidbox.FHIR.Resource.Patient // or serialization exception

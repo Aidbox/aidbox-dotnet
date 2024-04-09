@@ -3,11 +3,10 @@ using System.Text;
 using System.ComponentModel;
 using System.Net.Http.Headers;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using Utils;
 
 
-namespace API;
+namespace Aidbox;
 
 public enum AuthMethods
 {

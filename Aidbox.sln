@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aidbox", "Aidbox.csproj", "{E6601C85-694D-4175-AC55-F3916DDA4C70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aidbox", "src\Aidbox.csproj", "{E6601C85-694D-4175-AC55-F3916DDA4C70}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{6FA4A9B6-A08A-4955-9E4E-62B390F433CE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{17C19BFE-8D64-479A-B2F5-59087E370335}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AidboxClient", "examples\AidboxClient\AidboxClient.csproj", "{28074CBF-9036-4A18-BB62-FDA6B460E1BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AidboxClient", "examples\AidboxClient\AidboxClient.csproj", "{185C8969-D167-47BF-AD34-05E33D9156C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +23,10 @@ Global
 		{28074CBF-9036-4A18-BB62-FDA6B460E1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28074CBF-9036-4A18-BB62-FDA6B460E1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28074CBF-9036-4A18-BB62-FDA6B460E1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185C8969-D167-47BF-AD34-05E33D9156C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185C8969-D167-47BF-AD34-05E33D9156C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185C8969-D167-47BF-AD34-05E33D9156C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185C8969-D167-47BF-AD34-05E33D9156C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +35,6 @@ Global
 		SolutionGuid = {E5A740B4-08FE-4CFB-95D2-210011453C44}
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{28074CBF-9036-4A18-BB62-FDA6B460E1BD} = {6FA4A9B6-A08A-4955-9E4E-62B390F433CE}
+		{185C8969-D167-47BF-AD34-05E33D9156C2} = {17C19BFE-8D64-479A-B2F5-59087E370335}
 	EndGlobalSection
 EndGlobal

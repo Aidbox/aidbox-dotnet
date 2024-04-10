@@ -19,7 +19,7 @@ public class PatientsController : Controller
     [HttpGet("")]
     public async Task<IActionResult> Index()
     {
-        // var (patients, error) = await _aidbox.GetClient().Search<Patients>();
+        var (patients, error) = await _aidbox.GetClient().Search<Patient>();
         return View();
     }
 

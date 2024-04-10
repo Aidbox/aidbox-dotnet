@@ -78,3 +78,10 @@ await client.Create(new McodeCancerPatient()
 
 var (patient, error) = await client.Read<McodeCancerPatient>("patient-1")
 ```
+
+### Demo project
+
+#### How to run
+```sh
+dotnet run --project examples/AidboxClient
+```

@@ -85,34 +85,6 @@ public class Client
     }
   }
 
-  public async Task<(T? result, string? error)> Search<T>() where T : IResource
-  {
-    UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
-
-    var httpClient = this.HttpClient;
-
-    try
-    {
-      var response = await httpClient.GetAsync($"{resourcePath.Uri}");
-
-      if (!response.IsSuccessStatusCode)
-      {
-        throw new HttpRequestException($"Server returned error: {response.StatusCode}");
-      }
-
-      var content = await response.Content.ReadAsStringAsync();
-
-      T? parsedContent = JsonSerializer.Deserialize<T>(content, Config.JsonSerializerOptions);
-
-      return (parsedContent, default);
-    }
-
-    catch (HttpRequestException error)
-    {
-      return (default, error.Message);
-    }
-  }
-
   public async Task<(T? result, string? error)> Create<T>(T data) where T : IResource
   {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };

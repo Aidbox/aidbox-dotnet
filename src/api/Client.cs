@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using Utils;
+using Aidbox.FHIR.Base;
 
 
 namespace Aidbox;
@@ -25,6 +26,7 @@ public class Auth
   public required AuthMethods Method { get; set; }
   public required AuthCredentials Credentials { get; set; }
 }
+
 
 public class Client
 {
@@ -85,6 +87,33 @@ public class Client
     }
   }
 
+  public async Task<(Bundle<T>? result, string? error)> Search<T>() where T : IResource
+  {
+    UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
+
+    var httpClient = this.HttpClient;
+
+    try
+    {
+      var response = await httpClient.GetAsync($"{resourcePath.Uri}");
+
+      if (!response.IsSuccessStatusCode)
+      {
+        throw new HttpRequestException($"Server returned error: {response.StatusCode}");
+      }
+
+      var content = await response.Content.ReadAsStringAsync();
+
+      Bundle<T>? parsedContent = JsonSerializer.Deserialize<Bundle<T>>(content, Config.JsonSerializerOptions);
+
+      return (parsedContent, default);
+    }
+    catch (HttpRequestException error)
+    {
+      return (default, error.Message);
+    }
+  }
+
   public async Task<(T? result, string? error)> Create<T>(T data) where T : IResource
   {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
@@ -92,8 +121,6 @@ public class Client
     string jsonBody = JsonSerializer.Serialize<T>(data, Config.JsonSerializerOptions);
 
     HttpContent requestData = new StringContent(jsonBody, Encoding.UTF8, "application/json");
-
-    var httpClient = this.HttpClient;
 
     try
     {

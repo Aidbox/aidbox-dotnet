@@ -270,24 +270,24 @@ public class Bundle_Entry_Response
 	public Base.Resource? Outcome { get; set; }
 }
 
-public class Bundle_Entry
+public class Bundle_Entry<T>
 {
-	public string[]? Link { get; set; }
+	public Bundle_Link[]? Link { get; set; }
 	public string? FullUrl { get; set; }
-	public Base.Resource? Resource { get; set; }
+	public T? Resource { get; set; }
 	public Bundle_Entry_Search? Search { get; set; }
 	public Bundle_Entry_Request? Request { get; set; }
 	public Bundle_Entry_Response? Response { get; set; }
 }
 
-public class Bundle : Resource
+public class Bundle<T> : Resource
 {
 	public Base.Identifier? Identifier { get; set; }
 	public required string Type { get; set; }
 	public string? Timestamp { get; set; }
-	public string? Total { get; set; }
+	public int? Total { get; set; }
 	public Bundle_Link[]? Link { get; set; }
-	public Bundle_Entry[]? Entry { get; set; }
+	public Bundle_Entry<T>[]? Entry { get; set; }
 	public Base.Signature? Signature { get; set; }
 }
 

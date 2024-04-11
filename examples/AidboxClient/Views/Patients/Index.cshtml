@@ -15,22 +15,16 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Example Row 1 -->
-        <tr>
-            <td><a asp-controller="Patients" asp-action="Details" asp-route-id="7f97feb0-1ab3-4157-b562-19303ea8d964">John Doe</a></td>
-            <td>Yes</td>
-            <td>Male</td>
-            <td>1990-01-01</td>
-            <td>1234 Elm Street, Anytown, ST, 12345</td>
-        </tr>
-        <!-- Example Row 2 -->
-        <tr>
-            <td>No</td>
-            <td>Jane Doe</td>
-            <td>Female</td>
-            <td>1992-02-02</td>
-            <td>5678 Oak Street, Anycity, ST, 67890</td>
-        </tr>
-        <!-- Add more patient rows as needed -->
+        @foreach (PatientItemViewModel item in @Model)
+        {
+            <tr>
+                <td><a asp-controller="Patients" asp-action="Details"
+                        asp-route-id="@item.Id">@item.Name</a></td>
+                <td>@item.Active</td>
+                <td>@item.Gender</td>
+                <td>@item.BirthDate</td>
+                <td>@item.Address</td>
+            </tr>
+        }
     </tbody>
 </table>

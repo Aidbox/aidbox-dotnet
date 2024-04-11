@@ -19,24 +19,21 @@ public class PatientsController : Controller
     [HttpGet("")]
     public async Task<IActionResult> Index()
     {
-        // var (patients, error) = await _aidbox.GetClient().Read<Patient>();
-        return View();
+        var (patients, error) = await _aidbox.GetClient().Search<Patient>();
+        var patientVMs = patients?.Entry?
+            .Where(patient => patient.Resource is not null)
+            .Select(patient => new PatientItemViewModel(patient.Resource!));
+
+        return View(patientVMs);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> Details(string id)
     {
         var (patient, error) = await _aidbox.GetClient().Read<Patient>(id);
+        var patientVM = new PatientItemViewModel(patient!);
 
-        return View(new
-        {
-            Name = patient?.Name?.First().Text,
-            Active = patient?.Active,
-            patient?.Gender,
-            BirthDate = new DateOnly(2000, 1, 1),
-            Address = patient?.Address?.First().City,
-            PatientId = patient?.Id
-        });
+        return View(patientVM);
     }
 
 

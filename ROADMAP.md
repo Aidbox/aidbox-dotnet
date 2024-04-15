@@ -5,7 +5,7 @@ All implementation examples provided here are not final solutions yet.
 ### FHIR to C# Mappings
 
 
-#### Storing FHIR primitives as corresponding datatypes in C#
+#### [Storing FHIR primitives as corresponding datatypes in C#](https://github.com/Aidbox/aidbox-dotnet/issues/2)
 Use appropriate field types for storing fhir dates, date times (and other types) 
 
 ```c#
@@ -29,7 +29,7 @@ var fhirDate = new FhirDate("2024-01-01");
 
 
 
-#### Polymorphic fields
+#### [Polymorphic fields](https://github.com/Aidbox/aidbox-dotnet/issues/6)
 
 Instead of using one of the fields like here
 
@@ -51,7 +51,7 @@ patient.Deceased = new FhirDateTime("2024-01-01T100:00:00")
 
 
 
-#### Constrain possible values for codes
+#### [Constrain possible values for codes](https://github.com/Aidbox/aidbox-dotnet/issues/5)
 
 Value sets as enums
 ```c#

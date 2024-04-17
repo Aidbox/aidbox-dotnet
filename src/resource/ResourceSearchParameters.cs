@@ -4,6 +4,7 @@ using System.Web;
 
 namespace Aidbox.FHIR.Resource;
 
+
 public interface ISearchParameters {
     public string ToSearchString();
 }

@@ -1,9 +1,8 @@
 namespace Aidbox.FHIR.Resource;
 
-
 public class PatientSearchParameters : ResourceSearchParameters
 {
-    public string? Active;
+    public bool? Active;
     public string? Address;
     public string? AddressCity;
     public string? AddressCountry;

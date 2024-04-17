@@ -99,6 +99,8 @@ public class Client
         Query = searchParams?.ToSearchString() ?? ""
       };
 
+      System.Console.WriteLine(uri.ToString());
+
       var response = await this.HttpClient.GetAsync(uri.Uri);
 
       if (!response.IsSuccessStatusCode)

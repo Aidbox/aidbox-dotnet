@@ -1,6 +1,31 @@
-<div class="d-flex justify-content-between align-items-center">
-    <h2>Patient List</h2>
-    <button type="button" class="btn btn-primary btn-sm">Add patient</button>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <button type="button" class="btn btn-primary">Add patient</button>
+    <form action="/Patients" class="horizontal">
+        <div class="d-flex align-items-center">
+            <input class="form-control" type="text" name="name" value='@Model.Search.name' placeholder="Search by name">
+            <div class="mx-2"></div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="is-active" id="is-active-filter" value="true"
+                @(Model.Search.isActive ? "checked" : "") />
+                <label class="form-check-label" for="is-active-filter">
+                    Active?
+                </label>
+            </div>
+            <div class="mx-2"></div>
+            <select class="form-select" name="gender" id="">
+                <option value="" default>Filter by gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <div class="mx-2"></div>
+            <input class="form-control" type="date" name="birthdate">
+            <div class="mx-2"></div>
+            <button type="submit" class="btn btn-secondary">Search</button>
+        </div>
+
+    </form>
 </div>
 
 
@@ -15,11 +40,10 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (PatientItemViewModel item in @Model)
+        @foreach (PatientItemViewModel item in @Model.Patients)
         {
             <tr>
-                <td><a asp-controller="Patients" asp-action="Details"
-                        asp-route-id="@item.Id">@item.Name</a></td>
+                <td><a asp-controller="Patients" asp-action="Details" asp-route-id="@item.Id">@item.Name</a></td>
                 <td>@item.Active</td>
                 <td>@item.Gender</td>
                 <td>@item.BirthDate</td>

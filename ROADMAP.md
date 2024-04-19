@@ -96,37 +96,161 @@ var mothersName = new Extension("http://hl7.org/fhir/StructureDefinition/patient
 patient.Extension.Add(patient);
 ```
 
-
-
 #### List / circular structure / recursive structure
 
-*Example TBD* 
+https://github.com/Aidbox/aidbox-dotnet/blob/main/src/resource/Patient.cs#L18
 
 #### Reference [re-design Reference class] (aidbox format)
 
-*Example TBD* 
+```
+Problem: we don't want to concat string every time "Patient" + "/" + "<uuid>"
+
+FHIR: { reference: "Patient/<uuid>" }
+AIDBOX: { resourceType: Patient, id: <uuid> }
+
+patient.managingOrganization = new Reference<Organization>() { id:<uuid> }
+
+
+JsonParse(patient) => { "name": [], "managingOrganization": { "reference": "Organization/<uuid>" } } 
+```
 
 #### First class extensions (aidbox format)
 
-*Example TBD* 
+Problem: is hard to reach the exact extension in array with nested extensions
+
+```json
+{
+  "resourceType" : "Patient",
+  "id" : "child-example",
+  "meta" : {
+    "profile" : [🔗 "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|7.0.0"]
+  },
+  "extension" : [
+    {
+      "extension" : [
+        {
+          "url" : "ombCategory",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "code" : "2028-9",
+            "display" : "Asian"
+          }
+        },
+        {
+          "url" : "ombCategory",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "code" : "2028-9",
+            "display" : "Latinos"
+          }
+        },
+        {
+          "url" : "text",
+          "valueString" : "Asian"
+        }
+      ],
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+    },
+    {
+      "extension" : [
+        {
+          "url" : "ombCategory",
+          "valueCoding" : {
+            "system" : "urn:oid:2.16.840.1.113883.6.238",
+            "code" : "2186-5",
+            "display" : "Not Hispanic or Latino"
+          }
+        },
+        {
+          "url" : "text",
+          "valueString" : "Not Hispanic or Latino"
+        }
+      ],
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode" : "M"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+      "valueCode" : "248153007"
+    }
+  ]
+}
+```
+
+```
+GET /fhir/Patient/1
+
+
+reference = Patient/id
+reference = { id: 1, resourceType: Patient }
+
+patient.deseaced = { }
+```
+
+
+race = patiane.extension.find(item => item.url == "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race")
+
+```c#
+var patient = new Patient();
+var mothersName = new Extension("http://hl7.org/fhir/StructureDefinition/patient-mothersMaidenName", "Doe");
+
+patient.Extension.Add(patient);
+```
+
+
+ExtensionRace()
+race
+
+patient.race = [{ ombCategory: "Asian" }]
+patient.ethnicity = []
+
 
 #### Typed Search Params
 
 One of the possible solutions
 
 ```c#
-var params = new PatientSearchParams() {
-  Given = "John Doe"
+var params = new PatientSearchParams {
+  Active = true,
+  Given = "John Doe",
+  GeneralPractitioner = "",
+  Count = 10,
+  Page = 2,
 };
-var results = client.Search(params)
+var results = client.Search(params).Count(10).Page(2)
+
+```
+
+```c#
+var results = Patient.Search("name", "Doe")
+var results = Patient.Search("general-practitioner ", <id>)
 ```
 
 #### Profiles
 
 - patterns
-  *Example TBD* 
+  { "code" {:pattern {"coding" [{"system" "http://loinc.org", "code" "29549-3", "display" "Medication administered Narrative"}]}}}
+
+  ```c#
+  class CodeableConcept1(CodeableConcept){
+    readonly coding: [ new Conding295493() { System = "http://loinc.org", Code = "29549-3" } ]
+  }
+
+  class ObservationHeight(){
+    readonly code: new CodeableConcept();
+  }
+
+  var obseration = new ObservationHeight {
+    
+  }
+  ```
+
+
 - bindings  (resource code type suggestion from CodeSystem)
-  *Example TBD* 
+  patient.gender = male | female
 
 ### Client methods
 
@@ -163,31 +287,38 @@ var search = aidbox.Search<Patient>(params)
 
 #### Request exceptions
 
-*Example TBD* 
+resourceType: OperationOutcome
+text:
+  status: generated
+  div: Invalid resource
+issue:
+  - severity: fatal
+    code: invalid
+    expression:
+      - Appointment.participant
+    diagnostics: ':participant is required'
+  - severity: fatal
+    code: invalid
+    expression:
+      - Appointment.status
+    diagnostics: ':status is required'
 
 
 
 #### Conditional create / update
 
-*Example TBD* 
-
-
-
-#### Custom operations
-
-*Example TBD* 
-
+https://docs.aidbox.app/api-1/api/crud-1/patch#merge-patch
 
 
 #### Response as Bundle type
 
-*Example TBD* 
+https://docs.aidbox.app/api-1/transaction
 
 
 
 ### Model Validation
 
-#### Exceptions during runtime based on type-system [pydantic out of box]
+#### Exceptions during runtime based on type-system [c# serialize/parse out of box]
 
 *Example TBD* 
 
@@ -203,7 +334,9 @@ var search = aidbox.Search<Patient>(params)
 
 *Example TBD* 
 
+#### Custom operations
 
+https://docs.aidbox.app/app-development/aidbox-sdk/aidbox-apps
 
 ### Delivery
 

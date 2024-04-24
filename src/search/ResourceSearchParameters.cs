@@ -2,7 +2,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Aidbox.FHIR.Resource;
+namespace Aidbox.FHIR.Search;
 
 
 public interface ISearchParameters {

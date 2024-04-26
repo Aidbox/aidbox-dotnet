@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Text.Json;
 using Utils;
 using Aidbox.FHIR.Base;
+using Aidbox.FHIR.Search;
 
 
 namespace Aidbox;
@@ -89,13 +90,25 @@ public class Client
 
   public async Task<(Bundle<T>? result, string? error)> Search<T>() where T : IResource
   {
+    return await Search<T>("");
+  }
+
+  public async Task<(Bundle<T>? result, string? error)> Search<T>(ISearchParameters? searchParams) where T : IResource
+  {
+    return await Search<T>(searchParams?.ToQueryString() ?? "");
+  }
+
+  public async Task<(Bundle<T>? result, string? error)> Search<T>(string? queryString) where T : IResource
+  {
     UriBuilder resourcePath = new(this.Url) { Path = Config.ResourceMap[typeof(T)] };
 
-    var httpClient = this.HttpClient;
-
+    if (queryString is not null) {
+      resourcePath.Query = queryString;
+    }
+    
     try
     {
-      var response = await httpClient.GetAsync($"{resourcePath.Uri}");
+      var response = await this.HttpClient.GetAsync(resourcePath.Uri);
 
       if (!response.IsSuccessStatusCode)
       {

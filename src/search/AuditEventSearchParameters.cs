@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class AuditEventSearchParameters : AuditEventSearchParameters
+public class AuditEventSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Action;

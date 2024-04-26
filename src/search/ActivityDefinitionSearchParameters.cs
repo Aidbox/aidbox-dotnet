@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class ActivityDefinitionSearchParameters : ActivityDefinitionSearchParameters
+public class ActivityDefinitionSearchParameters : DomainResourceSearchParameters
 {
     
     public string? ComposedOf;

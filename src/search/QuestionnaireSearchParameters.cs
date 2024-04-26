@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class QuestionnaireSearchParameters : QuestionnaireSearchParameters
+public class QuestionnaireSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Code;

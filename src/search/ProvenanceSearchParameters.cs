@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class ProvenanceSearchParameters : ProvenanceSearchParameters
+public class ProvenanceSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Agent;

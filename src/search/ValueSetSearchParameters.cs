@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class ValueSetSearchParameters : ValueSetSearchParameters
+public class ValueSetSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Code;

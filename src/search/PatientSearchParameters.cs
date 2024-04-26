@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class PatientSearchParameters : DomainResourceSearchParameters, ISearchParameters
+public class PatientSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Active;

@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class CompositionSearchParameters : CompositionSearchParameters
+public class CompositionSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Attester;

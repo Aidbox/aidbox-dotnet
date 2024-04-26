@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class GroupSearchParameters : GroupSearchParameters
+public class GroupSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Actual;

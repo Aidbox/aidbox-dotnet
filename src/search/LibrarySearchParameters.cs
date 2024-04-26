@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class LibrarySearchParameters : LibrarySearchParameters
+public class LibrarySearchParameters : DomainResourceSearchParameters
 {
     
     public string? ComposedOf;

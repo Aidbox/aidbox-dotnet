@@ -6,7 +6,7 @@ namespace Aidbox.FHIR.Search;
 
 
 public interface ISearchParameters {
-    public string ToSearchString();
+    public string ToQueryString();
 }
 
 
@@ -20,7 +20,7 @@ public class ResourceSearchParameters : ISearchParameters {
     public string? Source;
     public string? Tag;
 
-    public string ToSearchString()
+    public string ToQueryString()
     {
         FieldInfo[] fields = GetType().GetFields();
 

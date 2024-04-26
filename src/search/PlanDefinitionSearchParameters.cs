@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class PlanDefinitionSearchParameters : PlanDefinitionSearchParameters
+public class PlanDefinitionSearchParameters : DomainResourceSearchParameters
 {
     
     public string? ComposedOf;

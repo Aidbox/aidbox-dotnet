@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class ObservationSearchParameters : ObservationSearchParameters
+public class ObservationSearchParameters : DomainResourceSearchParameters
 {
     
     public string? AminoAcidChange;

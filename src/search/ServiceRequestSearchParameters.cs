@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class ServiceRequestSearchParameters : ServiceRequestSearchParameters
+public class ServiceRequestSearchParameters : DomainResourceSearchParameters
 {
     
     public string? Authored;

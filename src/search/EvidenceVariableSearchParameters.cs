@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class EvidenceVariableSearchParameters : EvidenceVariableSearchParameters
+public class EvidenceVariableSearchParameters : DomainResourceSearchParameters
 {
     
     public string? ComposedOf;

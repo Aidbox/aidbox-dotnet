@@ -1,6 +1,6 @@
 namespace Aidbox.FHIR.Search;
 
-public class DiagnosticReportSearchParameters : DiagnosticReportSearchParameters
+public class DiagnosticReportSearchParameters : DomainResourceSearchParameters
 {
     
     public string? AssessedCondition;

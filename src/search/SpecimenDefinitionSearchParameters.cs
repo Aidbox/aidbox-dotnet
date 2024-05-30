@@ -2,11 +2,7 @@ namespace Aidbox.FHIR.Search;
 
 public class SpecimenDefinitionSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Container;
-    
-    public string? Identifier;
-    
-    public string? Type;
-    
+    public string? Container { get; set; }
+    public string? Identifier { get; set; }
+    public string? Type { get; set; }
 }

@@ -2,23 +2,13 @@ namespace Aidbox.FHIR.Search;
 
 public class MeasureReportSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Date;
-    
-    public string? EvaluatedResource;
-    
-    public string? Identifier;
-    
-    public string? Measure;
-    
-    public string? Patient;
-    
-    public string? Period;
-    
-    public string? Reporter;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? Date { get; set; }
+    public string? EvaluatedResource { get; set; }
+    public string? Identifier { get; set; }
+    public string? Measure { get; set; }
+    public string? Patient { get; set; }
+    public string? Period { get; set; }
+    public string? Reporter { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

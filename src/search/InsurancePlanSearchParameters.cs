@@ -2,33 +2,18 @@ namespace Aidbox.FHIR.Search;
 
 public class InsurancePlanSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Address;
-    
-    public string? AddressCity;
-    
-    public string? AddressCountry;
-    
-    public string? AddressPostalcode;
-    
-    public string? AddressState;
-    
-    public string? AddressUse;
-    
-    public string? AdministeredBy;
-    
-    public string? Endpoint;
-    
-    public string? Identifier;
-    
-    public string? Name;
-    
-    public string? OwnedBy;
-    
-    public string? Phonetic;
-    
-    public string? Status;
-    
-    public string? Type;
-    
+    public string? Address { get; set; }
+    public string? AddressCity { get; set; }
+    public string? AddressCountry { get; set; }
+    public string? AddressPostalcode { get; set; }
+    public string? AddressState { get; set; }
+    public string? AddressUse { get; set; }
+    public string? AdministeredBy { get; set; }
+    public string? Endpoint { get; set; }
+    public string? Identifier { get; set; }
+    public string? Name { get; set; }
+    public string? OwnedBy { get; set; }
+    public string? Phonetic { get; set; }
+    public string? Status { get; set; }
+    public string? Type { get; set; }
 }

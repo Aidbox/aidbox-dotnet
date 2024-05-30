@@ -2,29 +2,16 @@ namespace Aidbox.FHIR.Search;
 
 public class ListSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Code;
-    
-    public string? Date;
-    
-    public string? EmptyReason;
-    
-    public string? Encounter;
-    
-    public string? Identifier;
-    
-    public string? Item;
-    
-    public string? Notes;
-    
-    public string? Patient;
-    
-    public string? Source;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Title;
-    
+    public string? Code { get; set; }
+    public string? Date { get; set; }
+    public string? EmptyReason { get; set; }
+    public string? Encounter { get; set; }
+    public string? Identifier { get; set; }
+    public string? Item { get; set; }
+    public string? Notes { get; set; }
+    public string? Patient { get; set; }
+    public string? Source { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Title { get; set; }
 }

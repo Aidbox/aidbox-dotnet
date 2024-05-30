@@ -2,31 +2,17 @@ namespace Aidbox.FHIR.Search;
 
 public class MediaSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? BasedOn;
-    
-    public string? Created;
-    
-    public string? Device;
-    
-    public string? Encounter;
-    
-    public string? Identifier;
-    
-    public string? Modality;
-    
-    public string? Operator;
-    
-    public string? Patient;
-    
-    public string? Site;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Type;
-    
-    public string? View;
-    
+    public string? BasedOn { get; set; }
+    public string? Created { get; set; }
+    public string? Device { get; set; }
+    public string? Encounter { get; set; }
+    public string? Identifier { get; set; }
+    public string? Modality { get; set; }
+    public string? Operator { get; set; }
+    public string? Patient { get; set; }
+    public string? Site { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Type { get; set; }
+    public string? View { get; set; }
 }

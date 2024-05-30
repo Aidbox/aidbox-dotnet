@@ -2,37 +2,20 @@ namespace Aidbox.FHIR.Search;
 
 public class MedicationRequestSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Authoredon;
-    
-    public string? Category;
-    
-    public string? Code;
-    
-    public string? Date;
-    
-    public string? Encounter;
-    
-    public string? Identifier;
-    
-    public string? IntendedDispenser;
-    
-    public string? IntendedPerformer;
-    
-    public string? IntendedPerformertype;
-    
-    public string? Intent;
-    
-    public string? Medication;
-    
-    public string? Patient;
-    
-    public string? Priority;
-    
-    public string? Requester;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? Authoredon { get; set; }
+    public string? Category { get; set; }
+    public string? Code { get; set; }
+    public string? Date { get; set; }
+    public string? Encounter { get; set; }
+    public string? Identifier { get; set; }
+    public string? IntendedDispenser { get; set; }
+    public string? IntendedPerformer { get; set; }
+    public string? IntendedPerformertype { get; set; }
+    public string? Intent { get; set; }
+    public string? Medication { get; set; }
+    public string? Patient { get; set; }
+    public string? Priority { get; set; }
+    public string? Requester { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

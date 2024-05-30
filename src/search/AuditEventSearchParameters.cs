@@ -2,41 +2,22 @@ namespace Aidbox.FHIR.Search;
 
 public class AuditEventSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Action;
-    
-    public string? Address;
-    
-    public string? Agent;
-    
-    public string? AgentName;
-    
-    public string? AgentRole;
-    
-    public string? Altid;
-    
-    public string? Date;
-    
-    public string? Entity;
-    
-    public string? EntityName;
-    
-    public string? EntityRole;
-    
-    public string? EntityType;
-    
-    public string? Outcome;
-    
-    public string? Patient;
-    
-    public string? Policy;
-    
-    public string? Site;
-    
-    public string? Source;
-    
-    public string? Subtype;
-    
-    public string? Type;
-    
+    public string? Action { get; set; }
+    public string? Address { get; set; }
+    public string? Agent { get; set; }
+    public string? AgentName { get; set; }
+    public string? AgentRole { get; set; }
+    public string? Altid { get; set; }
+    public string? Date { get; set; }
+    public string? Entity { get; set; }
+    public string? EntityName { get; set; }
+    public string? EntityRole { get; set; }
+    public string? EntityType { get; set; }
+    public string? Outcome { get; set; }
+    public string? Patient { get; set; }
+    public string? Policy { get; set; }
+    public string? Site { get; set; }
+    public string? Source { get; set; }
+    public string? Subtype { get; set; }
+    public string? Type { get; set; }
 }

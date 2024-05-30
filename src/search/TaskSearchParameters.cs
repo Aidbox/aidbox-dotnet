@@ -2,43 +2,24 @@ namespace Aidbox.FHIR.Search;
 
 public class TaskSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? AuthoredOn;
-    
-    public string? BasedOn;
-    
-    public string? BusinessStatus;
-    
-    public string? Code;
-    
-    public string? Encounter;
-    
-    public string? Focus;
-    
-    public string? GroupIdentifier;
-    
-    public string? Identifier;
-    
-    public string? Intent;
-    
-    public string? Modified;
-    
-    public string? Owner;
-    
-    public string? PartOf;
-    
-    public string? Patient;
-    
-    public string? Performer;
-    
-    public string? Period;
-    
-    public string? Priority;
-    
-    public string? Requester;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? AuthoredOn { get; set; }
+    public string? BasedOn { get; set; }
+    public string? BusinessStatus { get; set; }
+    public string? Code { get; set; }
+    public string? Encounter { get; set; }
+    public string? Focus { get; set; }
+    public string? GroupIdentifier { get; set; }
+    public string? Identifier { get; set; }
+    public string? Intent { get; set; }
+    public string? Modified { get; set; }
+    public string? Owner { get; set; }
+    public string? PartOf { get; set; }
+    public string? Patient { get; set; }
+    public string? Performer { get; set; }
+    public string? Period { get; set; }
+    public string? Priority { get; set; }
+    public string? Requester { get; set; }
+    public string? ResearchStudy { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

@@ -2,21 +2,12 @@ namespace Aidbox.FHIR.Search;
 
 public class AccountSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Identifier;
-    
-    public string? Name;
-    
-    public string? Owner;
-    
-    public string? Patient;
-    
-    public string? Period;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Type;
-    
+    public string? Identifier { get; set; }
+    public string? Name { get; set; }
+    public string? Owner { get; set; }
+    public string? Patient { get; set; }
+    public string? Period { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Type { get; set; }
 }

@@ -2,51 +2,29 @@ namespace Aidbox.FHIR.Search;
 
 public class EncounterSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Account;
-    
-    public string? Appointment;
-    
-    public string? BasedOn;
-    
-    public string? Class;
-    
-    public string? Date;
-    
-    public string? Diagnosis;
-    
-    public string? EpisodeOfCare;
-    
-    public string? Identifier;
-    
-    public string? Length;
-    
-    public string? Location;
-    
-    public string? LocationPeriod;
-    
-    public string? PartOf;
-    
-    public string? Participant;
-    
-    public string? ParticipantType;
-    
-    public string? Patient;
-    
-    public string? Practitioner;
-    
-    public string? ReasonCode;
-    
-    public string? ReasonReference;
-    
-    public string? ServiceProvider;
-    
-    public string? SpecialArrangement;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Type;
-    
+    public string? Account { get; set; }
+    public string? Appointment { get; set; }
+    public string? BasedOn { get; set; }
+    public string? Class { get; set; }
+    public string? Date { get; set; }
+    public string? Diagnosis { get; set; }
+    public string? EpisodeOfCare { get; set; }
+    public string? Id { get; set; }
+    public string? Identifier { get; set; }
+    public string? Length { get; set; }
+    public string? Location { get; set; }
+    public string? LocationPeriod { get; set; }
+    public string? PartOf { get; set; }
+    public string? Participant { get; set; }
+    public string? ParticipantType { get; set; }
+    public string? Patient { get; set; }
+    public string? Practitioner { get; set; }
+    public string? ReasonCode { get; set; }
+    public string? ReasonReference { get; set; }
+    public string? ResearchStudy { get; set; }
+    public string? ServiceProvider { get; set; }
+    public string? SpecialArrangement { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Type { get; set; }
 }

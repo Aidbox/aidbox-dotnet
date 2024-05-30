@@ -2,13 +2,8 @@ namespace Aidbox.FHIR.Search;
 
 public class GuidanceResponseSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Identifier;
-    
-    public string? Patient;
-    
-    public string? Request;
-    
-    public string? Subject;
-    
+    public string? Identifier { get; set; }
+    public string? Patient { get; set; }
+    public string? Request { get; set; }
+    public string? Subject { get; set; }
 }

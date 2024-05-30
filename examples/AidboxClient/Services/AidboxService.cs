@@ -16,7 +16,7 @@ public class AidboxClientService : IAidboxClientService
             Credentials = new() { Username = "basic", Password = "secret" }
         };
 
-        _sdkClient = new("https://dotnetsdkdemo.aidbox.app", auth);
+        _sdkClient = new("http://localhost:8765", auth);
     }
 
     public Client GetClient()

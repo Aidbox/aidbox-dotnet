@@ -2,43 +2,23 @@ namespace Aidbox.FHIR.Search;
 
 public class PersonSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Address;
-    
-    public string? AddressCity;
-    
-    public string? AddressCountry;
-    
-    public string? AddressPostalcode;
-    
-    public string? AddressState;
-    
-    public string? AddressUse;
-    
-    public string? Birthdate;
-    
-    public string? Email;
-    
-    public string? Gender;
-    
-    public string? Identifier;
-    
-    public string? Link;
-    
-    public string? Name;
-    
-    public string? Organization;
-    
-    public string? Patient;
-    
-    public string? Phone;
-    
-    public string? Phonetic;
-    
-    public string? Practitioner;
-    
-    public string? Relatedperson;
-    
-    public string? Telecom;
-    
+    public string? Address { get; set; }
+    public string? AddressCity { get; set; }
+    public string? AddressCountry { get; set; }
+    public string? AddressPostalcode { get; set; }
+    public string? AddressState { get; set; }
+    public string? AddressUse { get; set; }
+    public string? Birthdate { get; set; }
+    public string? Email { get; set; }
+    public string? Gender { get; set; }
+    public string? Identifier { get; set; }
+    public string? Link { get; set; }
+    public string? Name { get; set; }
+    public string? Organization { get; set; }
+    public string? Patient { get; set; }
+    public string? Phone { get; set; }
+    public string? Phonetic { get; set; }
+    public string? Practitioner { get; set; }
+    public string? Relatedperson { get; set; }
+    public string? Telecom { get; set; }
 }

@@ -2,39 +2,21 @@ namespace Aidbox.FHIR.Search;
 
 public class ChargeItemSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Account;
-    
-    public string? Code;
-    
-    public string? Context;
-    
-    public string? EnteredDate;
-    
-    public string? Enterer;
-    
-    public string? FactorOverride;
-    
-    public string? Identifier;
-    
-    public string? Occurrence;
-    
-    public string? Patient;
-    
-    public string? PerformerActor;
-    
-    public string? PerformerFunction;
-    
-    public string? PerformingOrganization;
-    
-    public string? PriceOverride;
-    
-    public string? Quantity;
-    
-    public string? RequestingOrganization;
-    
-    public string? Service;
-    
-    public string? Subject;
-    
+    public string? Account { get; set; }
+    public string? Code { get; set; }
+    public string? Context { get; set; }
+    public string? EnteredDate { get; set; }
+    public string? Enterer { get; set; }
+    public string? FactorOverride { get; set; }
+    public string? Identifier { get; set; }
+    public string? Occurrence { get; set; }
+    public string? Patient { get; set; }
+    public string? PerformerActor { get; set; }
+    public string? PerformerFunction { get; set; }
+    public string? PerformingOrganization { get; set; }
+    public string? PriceOverride { get; set; }
+    public string? Quantity { get; set; }
+    public string? RequestingOrganization { get; set; }
+    public string? Service { get; set; }
+    public string? Subject { get; set; }
 }

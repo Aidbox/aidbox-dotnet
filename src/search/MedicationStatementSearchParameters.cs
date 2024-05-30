@@ -2,27 +2,16 @@ namespace Aidbox.FHIR.Search;
 
 public class MedicationStatementSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Category;
-    
-    public string? Code;
-    
-    public string? Context;
-    
-    public string? Effective;
-    
-    public string? Identifier;
-    
-    public string? Medication;
-    
-    public string? PartOf;
-    
-    public string? Patient;
-    
-    public string? Source;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? Category { get; set; }
+    public string? Code { get; set; }
+    public string? Context { get; set; }
+    public string? Effective { get; set; }
+    public string? Identifier { get; set; }
+    public string? Medication { get; set; }
+    public string? PartOf { get; set; }
+    public string? Patient { get; set; }
+    public string? ResearchStudy { get; set; }
+    public string? Source { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

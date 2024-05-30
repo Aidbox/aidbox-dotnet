@@ -2,17 +2,10 @@ namespace Aidbox.FHIR.Search;
 
 public class EndpointSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? ConnectionType;
-    
-    public string? Identifier;
-    
-    public string? Name;
-    
-    public string? Organization;
-    
-    public string? PayloadType;
-    
-    public string? Status;
-    
+    public string? ConnectionType { get; set; }
+    public string? Identifier { get; set; }
+    public string? Name { get; set; }
+    public string? Organization { get; set; }
+    public string? PayloadType { get; set; }
+    public string? Status { get; set; }
 }

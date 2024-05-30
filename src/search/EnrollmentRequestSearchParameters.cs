@@ -2,13 +2,8 @@ namespace Aidbox.FHIR.Search;
 
 public class EnrollmentRequestSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Identifier;
-    
-    public string? Patient;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? Identifier { get; set; }
+    public string? Patient { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

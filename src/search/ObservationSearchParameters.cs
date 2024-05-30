@@ -2,91 +2,48 @@ namespace Aidbox.FHIR.Search;
 
 public class ObservationSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? AminoAcidChange;
-    
-    public string? BasedOn;
-    
-    public string? Category;
-    
-    public string? Code;
-    
-    public string? CodeValueConcept;
-    
-    public string? CodeValueDate;
-    
-    public string? CodeValueQuantity;
-    
-    public string? CodeValueString;
-    
-    public string? ComboCode;
-    
-    public string? ComboCodeValueConcept;
-    
-    public string? ComboCodeValueQuantity;
-    
-    public string? ComboDataAbsentReason;
-    
-    public string? ComboValueConcept;
-    
-    public string? ComboValueQuantity;
-    
-    public string? ComponentCode;
-    
-    public string? ComponentCodeValueConcept;
-    
-    public string? ComponentCodeValueQuantity;
-    
-    public string? ComponentDataAbsentReason;
-    
-    public string? ComponentValueConcept;
-    
-    public string? ComponentValueQuantity;
-    
-    public string? DataAbsentReason;
-    
-    public string? Date;
-    
-    public string? DerivedFrom;
-    
-    public string? Device;
-    
-    public string? DnaVariant;
-    
-    public string? Encounter;
-    
-    public string? Focus;
-    
-    public string? GeneAminoAcidChange;
-    
-    public string? GeneDnavariant;
-    
-    public string? GeneIdentifier;
-    
-    public string? HasMember;
-    
-    public string? Identifier;
-    
-    public string? Method;
-    
-    public string? PartOf;
-    
-    public string? Patient;
-    
-    public string? Performer;
-    
-    public string? Specimen;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? ValueConcept;
-    
-    public string? ValueDate;
-    
-    public string? ValueQuantity;
-    
-    public string? ValueString;
-    
+    public string? AminoAcidChange { get; set; }
+    public string? BasedOn { get; set; }
+    public string? Category { get; set; }
+    public string? Code { get; set; }
+    public string? CodeValueConcept { get; set; }
+    public string? CodeValueDate { get; set; }
+    public string? CodeValueQuantity { get; set; }
+    public string? CodeValueString { get; set; }
+    public string? ComboCode { get; set; }
+    public string? ComboCodeValueConcept { get; set; }
+    public string? ComboCodeValueQuantity { get; set; }
+    public string? ComboDataAbsentReason { get; set; }
+    public string? ComboValueConcept { get; set; }
+    public string? ComboValueQuantity { get; set; }
+    public string? ComponentCode { get; set; }
+    public string? ComponentCodeValueConcept { get; set; }
+    public string? ComponentCodeValueQuantity { get; set; }
+    public string? ComponentDataAbsentReason { get; set; }
+    public string? ComponentValueConcept { get; set; }
+    public string? ComponentValueQuantity { get; set; }
+    public string? DataAbsentReason { get; set; }
+    public string? Date { get; set; }
+    public string? DerivedFrom { get; set; }
+    public string? Device { get; set; }
+    public string? DnaVariant { get; set; }
+    public string? Encounter { get; set; }
+    public string? Focus { get; set; }
+    public string? GeneAminoAcidChange { get; set; }
+    public string? GeneDnavariant { get; set; }
+    public string? GeneIdentifier { get; set; }
+    public string? HasMember { get; set; }
+    public string? Identifier { get; set; }
+    public string? Method { get; set; }
+    public string? PartOf { get; set; }
+    public string? Patient { get; set; }
+    public string? Performer { get; set; }
+    public string? ResearchStudy { get; set; }
+    public string? Specimen { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? ValueConcept { get; set; }
+    public string? ValueDate { get; set; }
+    public string? ValueQuantity { get; set; }
+    public string? ValueString { get; set; }
 }

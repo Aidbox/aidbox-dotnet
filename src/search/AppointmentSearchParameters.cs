@@ -2,39 +2,21 @@ namespace Aidbox.FHIR.Search;
 
 public class AppointmentSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Actor;
-    
-    public string? AppointmentType;
-    
-    public string? BasedOn;
-    
-    public string? Date;
-    
-    public string? Identifier;
-    
-    public string? Location;
-    
-    public string? PartStatus;
-    
-    public string? Patient;
-    
-    public string? Practitioner;
-    
-    public string? ReasonCode;
-    
-    public string? ReasonReference;
-    
-    public string? ServiceCategory;
-    
-    public string? ServiceType;
-    
-    public string? Slot;
-    
-    public string? Specialty;
-    
-    public string? Status;
-    
-    public string? SupportingInfo;
-    
+    public string? Actor { get; set; }
+    public string? AppointmentType { get; set; }
+    public string? BasedOn { get; set; }
+    public string? Date { get; set; }
+    public string? Identifier { get; set; }
+    public string? Location { get; set; }
+    public string? PartStatus { get; set; }
+    public string? Patient { get; set; }
+    public string? Practitioner { get; set; }
+    public string? ReasonCode { get; set; }
+    public string? ReasonReference { get; set; }
+    public string? ServiceCategory { get; set; }
+    public string? ServiceType { get; set; }
+    public string? Slot { get; set; }
+    public string? Specialty { get; set; }
+    public string? Status { get; set; }
+    public string? SupportingInfo { get; set; }
 }

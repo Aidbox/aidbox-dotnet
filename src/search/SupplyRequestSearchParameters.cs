@@ -2,19 +2,11 @@ namespace Aidbox.FHIR.Search;
 
 public class SupplyRequestSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Category;
-    
-    public string? Date;
-    
-    public string? Identifier;
-    
-    public string? Requester;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Supplier;
-    
+    public string? Category { get; set; }
+    public string? Date { get; set; }
+    public string? Identifier { get; set; }
+    public string? Requester { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Supplier { get; set; }
 }

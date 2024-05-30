@@ -2,49 +2,26 @@ namespace Aidbox.FHIR.Search;
 
 public class ActivityDefinitionSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? ComposedOf;
-    
-    public string? Context;
-    
-    public string? ContextQuantity;
-    
-    public string? ContextType;
-    
-    public string? ContextTypeQuantity;
-    
-    public string? ContextTypeValue;
-    
-    public string? Date;
-    
-    public string? DependsOn;
-    
-    public string? DerivedFrom;
-    
-    public string? Description;
-    
-    public string? Effective;
-    
-    public string? Identifier;
-    
-    public string? Jurisdiction;
-    
-    public string? Name;
-    
-    public string? Predecessor;
-    
-    public string? Publisher;
-    
-    public string? Status;
-    
-    public string? Successor;
-    
-    public string? Title;
-    
-    public string? Topic;
-    
-    public string? Url;
-    
-    public string? Version;
-    
+    public string? ComposedOf { get; set; }
+    public string? Context { get; set; }
+    public string? ContextQuantity { get; set; }
+    public string? ContextType { get; set; }
+    public string? ContextTypeQuantity { get; set; }
+    public string? ContextTypeValue { get; set; }
+    public string? Date { get; set; }
+    public string? DependsOn { get; set; }
+    public string? DerivedFrom { get; set; }
+    public string? Description { get; set; }
+    public string? Effective { get; set; }
+    public string? Identifier { get; set; }
+    public string? Jurisdiction { get; set; }
+    public string? Name { get; set; }
+    public string? Predecessor { get; set; }
+    public string? Publisher { get; set; }
+    public string? Status { get; set; }
+    public string? Successor { get; set; }
+    public string? Title { get; set; }
+    public string? Topic { get; set; }
+    public string? Url { get; set; }
+    public string? Version { get; set; }
 }

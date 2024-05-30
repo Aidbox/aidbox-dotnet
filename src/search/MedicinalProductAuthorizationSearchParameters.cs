@@ -2,15 +2,9 @@ namespace Aidbox.FHIR.Search;
 
 public class MedicinalProductAuthorizationSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Country;
-    
-    public string? Holder;
-    
-    public string? Identifier;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
+    public string? Country { get; set; }
+    public string? Holder { get; set; }
+    public string? Identifier { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
 }

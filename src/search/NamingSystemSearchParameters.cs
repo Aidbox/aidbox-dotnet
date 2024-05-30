@@ -2,43 +2,23 @@ namespace Aidbox.FHIR.Search;
 
 public class NamingSystemSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Contact;
-    
-    public string? Context;
-    
-    public string? ContextQuantity;
-    
-    public string? ContextType;
-    
-    public string? ContextTypeQuantity;
-    
-    public string? ContextTypeValue;
-    
-    public string? Date;
-    
-    public string? Description;
-    
-    public string? IdType;
-    
-    public string? Jurisdiction;
-    
-    public string? Kind;
-    
-    public string? Name;
-    
-    public string? Period;
-    
-    public string? Publisher;
-    
-    public string? Responsible;
-    
-    public string? Status;
-    
-    public string? Telecom;
-    
-    public string? Type;
-    
-    public string? Value;
-    
+    public string? Contact { get; set; }
+    public string? Context { get; set; }
+    public string? ContextQuantity { get; set; }
+    public string? ContextType { get; set; }
+    public string? ContextTypeQuantity { get; set; }
+    public string? ContextTypeValue { get; set; }
+    public string? Date { get; set; }
+    public string? Description { get; set; }
+    public string? IdType { get; set; }
+    public string? Jurisdiction { get; set; }
+    public string? Kind { get; set; }
+    public string? Name { get; set; }
+    public string? Period { get; set; }
+    public string? Publisher { get; set; }
+    public string? Responsible { get; set; }
+    public string? Status { get; set; }
+    public string? Telecom { get; set; }
+    public string? Type { get; set; }
+    public string? Value { get; set; }
 }

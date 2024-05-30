@@ -2,33 +2,18 @@ namespace Aidbox.FHIR.Search;
 
 public class OrganizationAffiliationSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Active;
-    
-    public string? Date;
-    
-    public string? Email;
-    
-    public string? Endpoint;
-    
-    public string? Identifier;
-    
-    public string? Location;
-    
-    public string? Network;
-    
-    public string? ParticipatingOrganization;
-    
-    public string? Phone;
-    
-    public string? PrimaryOrganization;
-    
-    public string? Role;
-    
-    public string? Service;
-    
-    public string? Specialty;
-    
-    public string? Telecom;
-    
+    public string? Active { get; set; }
+    public string? Date { get; set; }
+    public string? Email { get; set; }
+    public string? Endpoint { get; set; }
+    public string? Identifier { get; set; }
+    public string? Location { get; set; }
+    public string? Network { get; set; }
+    public string? ParticipatingOrganization { get; set; }
+    public string? Phone { get; set; }
+    public string? PrimaryOrganization { get; set; }
+    public string? Role { get; set; }
+    public string? Service { get; set; }
+    public string? Specialty { get; set; }
+    public string? Telecom { get; set; }
 }

@@ -2,43 +2,23 @@ namespace Aidbox.FHIR.Search;
 
 public class QuestionnaireSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Code;
-    
-    public string? Context;
-    
-    public string? ContextQuantity;
-    
-    public string? ContextType;
-    
-    public string? ContextTypeQuantity;
-    
-    public string? ContextTypeValue;
-    
-    public string? Date;
-    
-    public string? Definition;
-    
-    public string? Description;
-    
-    public string? Effective;
-    
-    public string? Identifier;
-    
-    public string? Jurisdiction;
-    
-    public string? Name;
-    
-    public string? Publisher;
-    
-    public string? Status;
-    
-    public string? SubjectType;
-    
-    public string? Title;
-    
-    public string? Url;
-    
-    public string? Version;
-    
+    public string? Code { get; set; }
+    public string? Context { get; set; }
+    public string? ContextQuantity { get; set; }
+    public string? ContextType { get; set; }
+    public string? ContextTypeQuantity { get; set; }
+    public string? ContextTypeValue { get; set; }
+    public string? Date { get; set; }
+    public string? Definition { get; set; }
+    public string? Description { get; set; }
+    public string? Effective { get; set; }
+    public string? Identifier { get; set; }
+    public string? Jurisdiction { get; set; }
+    public string? Name { get; set; }
+    public string? Publisher { get; set; }
+    public string? Status { get; set; }
+    public string? SubjectType { get; set; }
+    public string? Title { get; set; }
+    public string? Url { get; set; }
+    public string? Version { get; set; }
 }

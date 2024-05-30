@@ -2,31 +2,17 @@ namespace Aidbox.FHIR.Search;
 
 public class InvoiceSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Account;
-    
-    public string? Date;
-    
-    public string? Identifier;
-    
-    public string? Issuer;
-    
-    public string? Participant;
-    
-    public string? ParticipantRole;
-    
-    public string? Patient;
-    
-    public string? Recipient;
-    
-    public string? Status;
-    
-    public string? Subject;
-    
-    public string? Totalgross;
-    
-    public string? Totalnet;
-    
-    public string? Type;
-    
+    public string? Account { get; set; }
+    public string? Date { get; set; }
+    public string? Identifier { get; set; }
+    public string? Issuer { get; set; }
+    public string? Participant { get; set; }
+    public string? ParticipantRole { get; set; }
+    public string? Patient { get; set; }
+    public string? Recipient { get; set; }
+    public string? Status { get; set; }
+    public string? Subject { get; set; }
+    public string? Totalgross { get; set; }
+    public string? Totalnet { get; set; }
+    public string? Type { get; set; }
 }

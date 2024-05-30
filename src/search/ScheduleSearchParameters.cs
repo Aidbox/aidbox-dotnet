@@ -2,19 +2,11 @@ namespace Aidbox.FHIR.Search;
 
 public class ScheduleSearchParameters : DomainResourceSearchParameters
 {
-    
-    public string? Active;
-    
-    public string? Actor;
-    
-    public string? Date;
-    
-    public string? Identifier;
-    
-    public string? ServiceCategory;
-    
-    public string? ServiceType;
-    
-    public string? Specialty;
-    
+    public string? Active { get; set; }
+    public string? Actor { get; set; }
+    public string? Date { get; set; }
+    public string? Identifier { get; set; }
+    public string? ServiceCategory { get; set; }
+    public string? ServiceType { get; set; }
+    public string? Specialty { get; set; }
 }
